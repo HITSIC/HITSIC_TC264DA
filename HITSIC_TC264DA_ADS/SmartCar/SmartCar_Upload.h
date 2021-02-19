@@ -46,6 +46,7 @@ void SmartCar_VarUpload(float *my_var, uint8 var_num);
  * */
 void SmartCar_ImgUpload(uint8 *upload_img, uint8 row, uint8 col);
 
+//ÔİÊ±ÇëÎğÊ¹ÓÃPRINFT!!!
 void PRINFT(const char* ftm, ...);
 
 #endif

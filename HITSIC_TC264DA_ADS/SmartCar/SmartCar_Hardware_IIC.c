@@ -63,6 +63,7 @@ void SmartCar_HardwareI2c_Init(IfxI2c_Scl_InOut scl_pin, IfxI2c_Sda_InOut sda_pi
 }
 void SmartCar_HardwareI2c_Writereg(uint8 reg_addr, uint8* data_addr, uint8 data_num)
 {
+    uint16 time = 0;
     data[0] = reg_addr;//high address
     //data[1] = (uint8)reg_addr;//low address
     for(int i = 1;i<data_num + 1;i++)
@@ -70,14 +71,37 @@ void SmartCar_HardwareI2c_Writereg(uint8 reg_addr, uint8* data_addr, uint8 data_
         data[i] = *(data_addr + i-1);
     }
     //IfxI2c_I2c_write(&i2cdev_handle, data, data_num);
-    while(IfxI2c_I2c_write(&i2cdev_handle, data, data_num + 1) == IfxI2c_I2c_Status_nak);
+    while(IfxI2c_I2c_write(&i2cdev_handle, data, data_num + 1) == IfxI2c_I2c_Status_nak)
+    {
+        time++;
+        if(time > 32768)
+        {
+            break;
+        }
+    };
 }
 void SmartCar_HardwareI2c_Readreg(uint8 reg_addr, uint8* data_addr, uint8 data_num)
 {
+    uint16 time1 = 0;
+    uint16 time2 = 0;
     data[0] = reg_addr;//high address
     //data[1] = (uint8)reg_addr;//low address
     //IfxI2c_I2c_write(&i2cdev_handle, data, 1);
     //IfxI2c_I2c_read(&i2cdev_handle,data_addr,data_num);
     while(IfxI2c_I2c_write(&i2cdev_handle, data, 1) == IfxI2c_I2c_Status_nak);
+    {
+        time1++;
+        if(time1 > 32768)
+        {
+            break;
+        }
+    };
     while(IfxI2c_I2c_read(&i2cdev_handle,data_addr,data_num) == IfxI2c_I2c_Status_nak);
+    {
+        time2++;
+        if(time2 > 32768)
+        {
+            break;
+        }
+    };
 }

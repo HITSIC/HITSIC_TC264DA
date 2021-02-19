@@ -202,7 +202,7 @@ void SmartCar_MPU_Init1(void);
 void SmartCar_MPU_Getacc1(mpu_t* my_mpu);
 
 /*
- * brief 获得陀螺仪角加速度，软件iic，移植自逐飞1库
+ * brief 获得陀螺仪角加速度，软件iic，移植自逐飞库
  * */
 void SmartCar_MPU_Getgyro1(mpu_t* my_mpu);
 

@@ -39,7 +39,7 @@ typedef enum
  * para gptn 引脚使用的PGT12计数器号
  * para count_pin 计数引脚
  * para dir_pin 判断方向引脚
- * sample SmartCar_Encoder_Init(GPT12_T2, IfxGpt12_TxIn_In count_pin,IfxGpt12_TxEud_In dir_pin)
+ * sample SmartCar_Encoder_Init(GPT12_T2, IfxGpt120_T2INA_P00_7_IN, IfxGpt120_T2EUDA_P00_8_IN)
  * */
 void SmartCar_Encoder_Init(GPTn_enum gptn, IfxGpt12_TxIn_In count_pin,IfxGpt12_TxEud_In dir_pin);
 
