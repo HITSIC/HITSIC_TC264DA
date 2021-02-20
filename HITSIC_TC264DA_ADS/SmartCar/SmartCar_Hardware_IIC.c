@@ -35,7 +35,7 @@
 
 static IfxI2c_I2c i2c_handle;
 static IfxI2c_I2c_Device i2cdev_handle;
-uint8 data[64];
+//uint8 data[64];
 
 void SmartCar_HardwareI2c_Init(IfxI2c_Scl_InOut scl_pin, IfxI2c_Sda_InOut sda_pin, float32 baudrate)
 {
@@ -61,47 +61,51 @@ void SmartCar_HardwareI2c_Init(IfxI2c_Scl_InOut scl_pin, IfxI2c_Sda_InOut sda_pi
     IfxI2c_I2c_initDevice(&i2cdev_handle, &i2cdevice_config);
     //end initialize
 }
-void SmartCar_HardwareI2c_Writereg(uint8 reg_addr, uint8* data_addr, uint8 data_num)
+uint8 SmartCar_HardwareI2c_Writereg(uint8 reg_addr, uint8* data_addr, uint8 data_num)
 {
     uint16 time = 0;
-    data[0] = reg_addr;//high address
+    uint8 write_data[64] = {0};
+    //data[0] = reg_addr;//high address
+    write_data[0] = reg_addr;
     //data[1] = (uint8)reg_addr;//low address
     for(int i = 1;i<data_num + 1;i++)
     {
-        data[i] = *(data_addr + i-1);
+        write_data[i] = *(data_addr + i-1);
     }
     //IfxI2c_I2c_write(&i2cdev_handle, data, data_num);
-    while(IfxI2c_I2c_write(&i2cdev_handle, data, data_num + 1) == IfxI2c_I2c_Status_nak)
+    while(IfxI2c_I2c_write(&i2cdev_handle, write_data, data_num + 1) == IfxI2c_I2c_Status_nak)
     {
         time++;
         if(time > 32768)
         {
-            break;
+            return 1;
         }
     };
+    return 0;
 }
-void SmartCar_HardwareI2c_Readreg(uint8 reg_addr, uint8* data_addr, uint8 data_num)
+uint8 SmartCar_HardwareI2c_Readreg(uint8 reg_addr, uint8* data_addr, uint8 data_num)
 {
     uint16 time1 = 0;
     uint16 time2 = 0;
-    data[0] = reg_addr;//high address
+    //data[0] = reg_addr;//high address
     //data[1] = (uint8)reg_addr;//low address
     //IfxI2c_I2c_write(&i2cdev_handle, data, 1);
     //IfxI2c_I2c_read(&i2cdev_handle,data_addr,data_num);
-    while(IfxI2c_I2c_write(&i2cdev_handle, data, 1) == IfxI2c_I2c_Status_nak);
+    while(IfxI2c_I2c_write(&i2cdev_handle, &reg_addr, 1) == IfxI2c_I2c_Status_nak)
     {
         time1++;
         if(time1 > 32768)
         {
-            break;
+            return 1;
         }
     };
-    while(IfxI2c_I2c_read(&i2cdev_handle,data_addr,data_num) == IfxI2c_I2c_Status_nak);
+    while(IfxI2c_I2c_read(&i2cdev_handle,data_addr,data_num) == IfxI2c_I2c_Status_nak)
     {
         time2++;
         if(time2 > 32768)
         {
-            break;
+            return 1;
         }
     };
+    return 0;
 }

@@ -13,6 +13,7 @@
 #include "IfxScuWdt.h"
 #include "IfxFlash.h"
 
+
 #define EEPROM_BASE_ADDR             IFXFLASH_DFLASH_START
 #define EEPROM_SIZE                  IFXFLASH_DFLASH_SIZE                   //一共有96KB
 #define EEPROM_SECTOR_SIZE           (EEPROM_SIZE / IFXFLASH_DFLASH_NUM_LOG_SECTORS)
@@ -29,9 +30,9 @@
 //  @param      type            读取的数据类型uint32 uint16 uint8 int32 float等
 //  @return                     返回给定地址的数据
 //  @since      v1.0
-//  Sample usage:               flash_read(0,0,uint32);//读取0号扇区  第0也数据 类型为uint32
+//  Sample usage:               Page_Read(0,0,uint32);//读取0号扇区  第0也数据 类型为uint32
 //-------------------------------------------------------------------------------------------------------------------
-#define     Flash_Read(sector_num,page_num,type)      (*(type *)((uint32)((EEPROM_BASE_ADDR + (sector_num)*EEPROM_SECTOR_SIZE) + (page_num*8))))
+#define     Page_Read(sector_num,page_num,type)    (*(type *)((uint32)((EEPROM_BASE_ADDR + (sector_num)*EEPROM_SECTOR_SIZE) + (page_num*8))))
 
 #define     float_conversion_uint32(float_data)     (*(uint32 *)&float_data)
 
@@ -43,9 +44,9 @@
 //  @param      sector_num      需要写入的扇区编号   参数范围0-11
 //  @return     void
 //  @since      v1.0
-//  Sample usage:               Flash_Erase(0);
+//  Sample usage:               Sector_Erase(0);
 //-------------------------------------------------------------------------------------------------------------------
-void Flash_Erase(uint32 sector_num);
+void Sector_Erase(uint32 sector_num);
 //-------------------------------------------------------------------------------------------------------------------
 //  @brief      编程一页（写）
 //  @param      sector_num      需要写入的扇区编号   参数范围0-11
@@ -53,10 +54,18 @@ void Flash_Erase(uint32 sector_num);
 //  @param      buf             需要写入的数据地址   传入的数组类型必须为uint32
 //  @return     void
 //  @since      v1.0
-//  Sample usage:               Flash_Program(0,0, &buf);
+//  Sample usage:               Page_Program(0,0, &buf);
 //-------------------------------------------------------------------------------------------------------------------
-void Flash_Program(uint32 sector_num, uint32 page_num, uint32 *buf);
-
+void Page_Program(uint32 sector_num, uint32 page_num, uint32 *buf);
+//-------------------------------------------------------------------------------------------------------------------
+//  @brief      编程一扇区（写）   将buf起1024个数据写入扇区
+//  @param      sector_num      需要写入的扇区编号   参数范围0-11
+//  @param      buf             需要写入的数据地址   传入的数组类型必须为uint32
+//  @return     void
+//  @since      v1.0
+//  Sample usage:               Sector_Program(0,0, &buf[0]);
+//-------------------------------------------------------------------------------------------------------------------
+void Sector_Program(uint32 sector_num, uint32* buf);
 
 
 #endif /* SMARTCAR_SMARTCAR_FLASH_H_ */

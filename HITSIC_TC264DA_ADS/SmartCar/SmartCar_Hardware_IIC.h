@@ -40,7 +40,7 @@ void SmartCar_HardwareI2c_Init(IfxI2c_Scl_InOut scl_pin, IfxI2c_Sda_InOut sda_pi
  * para data_num 数据大小
  * sample SmartCar_HardwareI2c_Writereg(0x75, data_addr, 1);
  * */
-void SmartCar_HardwareI2c_Writereg(uint8 reg_addr, uint8* data_addr,uint8 data_num);
+uint8 SmartCar_HardwareI2c_Writereg(uint8 reg_addr, uint8* data_addr,uint8 data_num);
 
 /*
  * brief 写数据到从设备
@@ -49,6 +49,6 @@ void SmartCar_HardwareI2c_Writereg(uint8 reg_addr, uint8* data_addr,uint8 data_n
  * para data_num 数据大小
  * sample SmartCar_HardwareI2c_Readreg(0x75, data_addr, 1);
  * */
-void SmartCar_HardwareI2c_Readreg(uint8 reg_addr, uint8* data_addr,uint8 data_num);
+uint8 SmartCar_HardwareI2c_Readreg(uint8 reg_addr, uint8* data_addr,uint8 data_num);
 
 #endif

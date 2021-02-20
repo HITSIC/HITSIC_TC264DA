@@ -41,7 +41,6 @@
 #pragma section all "cpu0_dsram"
 //IfxCpu_syncEvent g_cpuSyncEvent;
 
-
 int core0_main(void)
 {
     IfxCpu_disableInterrupts();
@@ -59,7 +58,6 @@ int core0_main(void)
     
     IfxCpu_enableInterrupts();
     //初始化外设
-
 
     while(TRUE)
     {

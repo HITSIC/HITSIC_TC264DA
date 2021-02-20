@@ -9,7 +9,7 @@
 
 
 
-void Flash_Erase(uint32 sector_num)
+void Sector_Erase(uint32 sector_num)
 {
     uint32 flash = 0;
     uint16 end_init_sfty_pw;
@@ -25,7 +25,7 @@ void Flash_Erase(uint32 sector_num)
 }
 
 
-void Flash_Program(uint32 sector_num, uint32 page_num, uint32 *buf)
+void Page_Program(uint32 sector_num, uint32 page_num, uint32 *buf)
 {
 
     uint32 errors = 0;
@@ -49,3 +49,12 @@ void Flash_Program(uint32 sector_num, uint32 page_num, uint32 *buf)
     IfxFlash_waitUnbusy(flash, IfxFlash_FlashType_D0);
 }
 
+void Sector_Program(uint32 sector_num, uint32* buf)
+{
+    uint32* page_addr=buf;
+    for(uint32 i=0;i<EEPROM_SECTOR_PAGE_NUM;i++)
+    {
+        Page_Program(sector_num, i, page_addr);
+        page_addr++;
+    }
+}
