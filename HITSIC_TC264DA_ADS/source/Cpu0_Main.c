@@ -26,14 +26,26 @@
  *********************************************************************************************************************/
 #include "Ifx_Types.h"
 #include "IfxCpu.h"
+#include <ifxCpu_Irq.h>
 #include "IfxScuWdt.h"
+#include "SmartCar_Uart.h"
+#include "SmartCar_Upload.h"
+#include "SmartCar_Oled.h"
+#include "SmartCar_Pwm.h"
+#include "SmartCar_MPU.h"
+#include "SmartCar_MT9V034.h"
+#include "SmartCar_Systick.h"
+#include "common.h"
 
-IfxCpu_syncEvent g_cpuSyncEvent = 0;
+
+#pragma section all "cpu0_dsram"
+//IfxCpu_syncEvent g_cpuSyncEvent;
 
 int core0_main(void)
 {
-    IfxCpu_enableInterrupts();
+    IfxCpu_disableInterrupts();
     
+    get_clk();
     /* !!WATCHDOG0 AND SAFETY WATCHDOG ARE DISABLED HERE!!
      * Enable the watchdogs and service them periodically if it is required
      */
@@ -44,8 +56,13 @@ int core0_main(void)
     IfxCpu_emitEvent(&g_cpuSyncEvent);
     IfxCpu_waitEvent(&g_cpuSyncEvent, 1);
     
-    while(1)
+    IfxCpu_enableInterrupts();
+    //初始化外设
+
+    while(TRUE)
     {
+
     }
-    return (1);
 }
+
+#pragma section all restore

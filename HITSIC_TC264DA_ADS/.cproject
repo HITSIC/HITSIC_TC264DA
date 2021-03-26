@@ -318,6 +318,8 @@
                                     <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Libraries/iLLD/TC26B/Tricore/_Impl&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Libraries/iLLD/TC26B/Tricore/Sent/Std&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/SmartCar&quot;"/>
                                     								
                                 </option>
                                 								
@@ -349,7 +351,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding="out|cmake-build-debug|Libraries/iLLD/TC26B/Tricore/Dts|Libraries/iLLD/TC26B/Tricore/Asclin|Libraries/iLLD/TC26B/Tricore/Ccu6/PwmHl|Libraries/iLLD/TC26B/Tricore/Hssl|Libraries/iLLD/TC26B/Tricore/Dsadc/Rdc|Libraries/iLLD/TC26B/Tricore/Vadc|Libraries/iLLD/TC26B/Tricore/Msc/Msc|Libraries/iLLD/TC26B/Tricore/Ccu6/TPwm|Libraries/iLLD/TC26B/Tricore/Asclin/Asc|Libraries/iLLD/TC26B/Tricore/Asclin/Lin|Libraries/iLLD/TC26B/Tricore/Eth/Phy_Pef7071|Libraries/iLLD/TC26B/Tricore/Sent|Libraries/iLLD/TC26B/Tricore/Ccu6/Icu|Libraries/iLLD/TC26B/Tricore/Gtm/Tom/Pwm|Libraries/iLLD/TC26B/Tricore/Fce/Std|Libraries/iLLD/TC26B/Tricore/Eray|Libraries/Service/CpuGeneric/SysSe/Bsp|Libraries/iLLD/TC26B/Tricore/Fce/Crc|Libraries/iLLD/TC26B/Tricore/Gtm/Tom/Timer|Libraries/iLLD/TC26B/Tricore/Dsadc/Std|Libraries/iLLD/TC26B/Tricore/Psi5s/Psi5s|Libraries/iLLD/TC26B/Tricore/Flash/Std|Libraries/iLLD/TC26B/Tricore/Eray/Std|Libraries/iLLD/TC26B/Tricore/Flash|Libraries/iLLD/TC26B/Tricore/Fft|Libraries/iLLD/TC26B/Tricore/Dsadc/Dsadc|Libraries/iLLD/TC26B/Tricore/I2c/I2c|Libraries/iLLD/TC26B/Tricore/Src|Libraries/iLLD/TC26B/Tricore/Iom/Driver|Libraries/Service/CpuGeneric/If|Libraries/iLLD/TC26B/Tricore/Iom|Libraries/iLLD/TC26B/Tricore/Asclin/Spi|Libraries/Service/CpuGeneric/SysSe|Libraries/Service/CpuGeneric/If/Ccu6If|Libraries/iLLD/TC26B/Tricore/_Lib/DataHandling|Libraries/iLLD/TC26B/Tricore/Sent/Std|Libraries/iLLD/TC26B/Tricore/_Lib/InternalMux|Libraries/iLLD/TC26B/Tricore/Eray/Eray|Libraries/iLLD/TC26B/Tricore/Src/Std|Libraries/iLLD/TC26B/Tricore/Gtm/Tim/In|Libraries/iLLD/TC26B/Tricore/Qspi/SpiMaster|Libraries/iLLD/TC26B/Tricore/Multican|Libraries/iLLD/TC26B/Tricore/Cif/Std|Libraries/iLLD/TC26B/Tricore/Eth|Libraries/iLLD/TC26B/Tricore/Ccu6/TimerWithTrigger|Libraries/iLLD/TC26B/Tricore/Eth/Std|Libraries/iLLD/TC26B/Tricore/Port/Io|Libraries/Service/CpuGeneric/SysSe/Time|Libraries/iLLD/TC26B/Tricore/Dma|Libraries/iLLD/TC26B/Tricore/Fce|Libraries/iLLD/TC26B/Tricore/Gpt12|Libraries/iLLD/TC26B/Tricore/Ccu6/PwmBc|Libraries/iLLD/TC26B/Tricore/Ccu6/Timer|Libraries/iLLD/TC26B/Tricore/Emem/Std|Libraries/iLLD/TC26B/Tricore/Dts/Dts|Libraries/iLLD/TC26B/Tricore/Dts/Std|Libraries/iLLD/TC26B/Tricore/Smu/Std|Libraries/iLLD/TC26B/Tricore/_Build|Libraries/iLLD/TC26B/Tricore/Smu|Libraries/iLLD/TC26B/Tricore/_Lib|Libraries/iLLD/TC26B/Tricore/Gtm/Std|Libraries/iLLD/TC26B/Tricore/Gtm/Atom|Libraries/Service/CpuGeneric/StdIf|Libraries/iLLD/TC26B/Tricore/Gtm/Atom/PwmHl|Libraries/iLLD/TC26B/Tricore/Cpu/Irq|Libraries/iLLD/TC26B/Tricore/I2c|Libraries/iLLD/TC26B/Tricore/Hssl/Std|Libraries/iLLD/TC26B/Tricore/Ccu6/Std|Libraries/iLLD/TC26B/Tricore/Dma/Dma|Libraries/iLLD/TC26B/Tricore/Gtm/Tom|Libraries/iLLD/TC26B/Tricore/Cif/Cam|Libraries/Service/CpuGeneric/SysSe/General|Libraries/iLLD/TC26B/Tricore/Gtm/Trig|Libraries/iLLD/TC26B/Tricore/Msc|Libraries/iLLD/TC26B/Tricore/Gpt12/IncrEnc|Libraries/iLLD/TC26B/Tricore/I2c/Std|Libraries/iLLD/TC26B/Tricore/Gpt12/Std|Libraries/iLLD/TC26B/Tricore/Multican/Can|Libraries/iLLD/TC26B/Tricore/Dsadc|Libraries/iLLD/TC26B/Tricore/Psi5|Libraries/iLLD/TC26B/Tricore/Stm|Libraries/iLLD/TC26B/Tricore/Hssl/Hssl|Libraries/iLLD/TC26B/Tricore/Qspi/Std|Libraries/iLLD/TC26B/Tricore/Mtu/Std|Libraries/iLLD/TC26B/Tricore/Psi5s/Std|Libraries/Service/CpuGeneric/SysSe/Comm|Libraries/Service/CpuGeneric/SysSe/Math|Libraries/iLLD/TC26B/Tricore/Stm/Std|Libraries/iLLD/TC26B/Tricore/Mtu|Libraries/iLLD/TC26B/Tricore/Vadc/Adc|Libraries/iLLD/TC26B/Tricore/Sent/Sent|Libraries/iLLD/TC26B/Tricore/Fft/Std|Libraries/iLLD/TC26B/Tricore/Gtm/Atom/Timer|Libraries/iLLD/TC26B/Tricore/Multican/Std|Libraries/iLLD/TC26B/Tricore/Iom/Std|Libraries/iLLD/TC26B/Tricore/Fft/Fft|Libraries/iLLD/TC26B/Tricore/Psi5/Std|Libraries/iLLD/TC26B/Tricore/Dma/Std|Libraries/iLLD/TC26B/Tricore/Msc/Std|Libraries/iLLD/TC26B/Tricore/Vadc/Std|Libraries/iLLD/TC26B/Tricore/Stm/Timer|Libraries/iLLD/TC26B/Tricore/Qspi/SpiSlave|Libraries/iLLD/TC26B/Tricore/Ccu6|Libraries/iLLD/TC26B/Tricore/Cif|Libraries/iLLD/TC26B/Tricore/Emem|Libraries/iLLD/TC26B/Tricore/Gtm|Libraries/iLLD/TC26B/Tricore/Gtm/Atom/Pwm|Libraries/iLLD/TC26B/Tricore/Asclin/Std|Libraries/iLLD/TC26B/Tricore/Psi5s|Libraries/iLLD/TC26B/Tricore/Gtm/Tom/PwmHl|Libraries/iLLD/TC26B/Tricore/Gtm/Tim|Libraries/iLLD/TC26B/Tricore/Psi5/Psi5|Libraries/iLLD/TC26B/Tricore/Qspi" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="Libraries/iLLD/TC26B/Tricore/Dts|Libraries/iLLD/TC26B/Tricore/Ccu6/PwmHl|Libraries/iLLD/TC26B/Tricore/Hssl|Libraries/iLLD/TC26B/Tricore/Dsadc/Rdc|Libraries/iLLD/TC26B/Tricore/Msc/Msc|Libraries/iLLD/TC26B/Tricore/Ccu6/TPwm|Libraries/iLLD/TC26B/Tricore/Asclin/Lin|Libraries/iLLD/TC26B/Tricore/Eth/Phy_Pef7071|Libraries/iLLD/TC26B/Tricore/Sent|Libraries/iLLD/TC26B/Tricore/Ccu6/Icu|Libraries/iLLD/TC26B/Tricore/Gtm/Tom/Pwm|Libraries/iLLD/TC26B/Tricore/Fce/Std|Libraries/iLLD/TC26B/Tricore/Eray|Libraries/iLLD/TC26B/Tricore/Fce/Crc|Libraries/iLLD/TC26B/Tricore/Gtm/Tom/Timer|Libraries/iLLD/TC26B/Tricore/Dsadc/Std|Libraries/iLLD/TC26B/Tricore/Psi5s/Psi5s|Libraries/iLLD/TC26B/Tricore/Eray/Std|Libraries/iLLD/TC26B/Tricore/Fft|Libraries/iLLD/TC26B/Tricore/Dsadc/Dsadc|Libraries/iLLD/TC26B/Tricore/Iom/Driver|Libraries/iLLD/TC26B/Tricore/Iom|Libraries/iLLD/TC26B/Tricore/Asclin/Spi|Libraries/iLLD/TC26B/Tricore/Sent/Std|Libraries/iLLD/TC26B/Tricore/_Lib/InternalMux|Libraries/iLLD/TC26B/Tricore/Eray/Eray|Libraries/iLLD/TC26B/Tricore/Gtm/Tim/In|Libraries/iLLD/TC26B/Tricore/Multican|Libraries/iLLD/TC26B/Tricore/Cif/Std|Libraries/iLLD/TC26B/Tricore/Eth|Libraries/iLLD/TC26B/Tricore/Ccu6/TimerWithTrigger|Libraries/iLLD/TC26B/Tricore/Eth/Std|Libraries/Service/CpuGeneric/SysSe/Time|Libraries/iLLD/TC26B/Tricore/Fce|Libraries/iLLD/TC26B/Tricore/Ccu6/PwmBc|Libraries/iLLD/TC26B/Tricore/Emem/Std|Libraries/iLLD/TC26B/Tricore/Dts/Dts|Libraries/iLLD/TC26B/Tricore/Dts/Std|Libraries/iLLD/TC26B/Tricore/Smu/Std|Libraries/iLLD/TC26B/Tricore/_Build|Libraries/iLLD/TC26B/Tricore/Smu|Libraries/iLLD/TC26B/Tricore/Gtm/Atom/PwmHl|Libraries/iLLD/TC26B/Tricore/Hssl/Std|Libraries/iLLD/TC26B/Tricore/Gtm/Tom|Libraries/iLLD/TC26B/Tricore/Cif/Cam|Libraries/Service/CpuGeneric/SysSe/General|Libraries/iLLD/TC26B/Tricore/Gtm/Trig|Libraries/iLLD/TC26B/Tricore/Msc|Libraries/iLLD/TC26B/Tricore/Multican/Can|Libraries/iLLD/TC26B/Tricore/Dsadc|Libraries/iLLD/TC26B/Tricore/Psi5|Libraries/iLLD/TC26B/Tricore/Hssl/Hssl|Libraries/iLLD/TC26B/Tricore/Mtu/Std|Libraries/iLLD/TC26B/Tricore/Psi5s/Std|Libraries/Service/CpuGeneric/SysSe/Comm|Libraries/Service/CpuGeneric/SysSe/Math|Libraries/iLLD/TC26B/Tricore/Mtu|Libraries/iLLD/TC26B/Tricore/Sent/Sent|Libraries/iLLD/TC26B/Tricore/Fft/Std|Libraries/iLLD/TC26B/Tricore/Gtm/Atom/Timer|Libraries/iLLD/TC26B/Tricore/Multican/Std|Libraries/iLLD/TC26B/Tricore/Iom/Std|Libraries/iLLD/TC26B/Tricore/Fft/Fft|Libraries/iLLD/TC26B/Tricore/Psi5/Std|Libraries/iLLD/TC26B/Tricore/Msc/Std|Libraries/iLLD/TC26B/Tricore/Stm/Timer|Libraries/iLLD/TC26B/Tricore/Qspi/SpiSlave|Libraries/iLLD/TC26B/Tricore/Cif|Libraries/iLLD/TC26B/Tricore/Emem|Libraries/iLLD/TC26B/Tricore/Psi5s|Libraries/iLLD/TC26B/Tricore/Gtm/Tom/PwmHl|Libraries/iLLD/TC26B/Tricore/Gtm/Tim|Libraries/iLLD/TC26B/Tricore/Psi5/Psi5" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
@@ -704,12 +706,6 @@
                         </toolChain>
                         					
                     </folderInfo>
-                    					
-                    <sourceEntries>
-                        						
-                        <entry excluding="out|cmake-build-debug" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-                        					
-                    </sourceEntries>
                     				
                 </configuration>
                 			
@@ -751,21 +747,7 @@
         	
     </storageModule>
     	
-    <storageModule moduleId="refreshScope" versionNumber="2">
-        		
-        <configuration configurationName="Debug">
-            			
-            <resource resourceType="PROJECT" workspacePath="/HITSIC_TC264DA_ADS"/>
-            		
-        </configuration>
-        		
-        <configuration configurationName="Release">
-            			
-            <resource resourceType="PROJECT" workspacePath="/HITSIC_TC264DA_ADS"/>
-            		
-        </configuration>
-        	
-    </storageModule>
+    <storageModule moduleId="refreshScope"/>
     	
     <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
     
